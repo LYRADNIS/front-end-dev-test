@@ -1,37 +1,85 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const SRC_DIR = path.join(__dirname, 'src');
+
+const DIST_DIR = path.join(__dirname, 'dist');
+
 module.exports = {
-	entry: './src/app.js',
-
-	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'app.js'
-	},
-
-	watch: true,
-
-	devServer: {
-		inline: true
-	},
-
-	//Add sass-loader
-	module: {
-		loaders: [
+  entry: path.join(__dirname, '/src/app.jsx'),
+  module: {
+    rules: [
       {
-        test: /\.html$/,
-        loader: "raw-loader"
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/env', '@babel/react'],
+          plugins: ['babel-plugin-styled-components'],
+        },
       },
-			{
-				test: /\.(css)$/,
-				use: [{
-					loader: 'style-loader'
-				}, {
-					loader: 'css-loader'
-				}, {
-					loader: 'sass-loader'
-				}]
-			}
-		]
-	}
-}
+
+    ],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.join(__dirname, 'dist'),
+  },
+};
+
+
+
+
+
+
+
+// module.exports = {
+// 	entry: `${SRC_DIR}/app.jsx`,
+
+//     // where our data goes
+
+// 	watch: true,
+
+
+// 	module: {
+// 		rules: [
+// 		{
+// 		 test: /\.jsx$/,
+//         exclude: /node_modules/,
+//         loader: 'babel-loader',
+//         options: {
+//           presets: ['env', 'react'],
+//           plugins: ['babel-plugin-styled-components'],
+//         },
+// 		},
+
+//     {
+//       test: /\.html$/,
+//       loader: "raw-loader"
+//     },
+
+	 // {
+		// test: /\.(css)$/,
+		// 	use: [{
+		// 		loader: 'style-loader'
+		// 	}, {
+		// 		loader: 'css-loader'
+		// 	}, {
+		// 		loader: 'sass-loader'
+		// 	}]
+		// },
+
+// 			//third loader could go here
+// 		]
+// 	},
+// 	output: {
+// 		path: DIST_DIR,
+// 		filename: 'bundle.js'
+// 	},
+// };
+
+
+
+
+
+
