@@ -6,7 +6,7 @@ const SRC_DIR = path.join(__dirname, 'src');
 const DIST_DIR = path.join(__dirname, 'dist');
 
 module.exports = {
-  entry: path.join(__dirname, '/src/app.jsx'),
+  entry: path.join(__dirname, '/src/root.jsx'),
   module: {
     rules: [
       {
