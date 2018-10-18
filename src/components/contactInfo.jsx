@@ -10,7 +10,7 @@ const Div = styled.div`
 
 const contactInfo = () => {
   return (
-    <Div>contact information here</Div>
+    <Div>ABOUT </Div>
     )
 }
 
