@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 
 const Div = styled.div`
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   border-radius: 3px;
   border: 2px solid blue;
   display:grid;
@@ -17,8 +17,10 @@ const ChildDiv = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 3px;
-  border: 2px solid blue;
+  border: 2px ;
   margin: auto;
+  background-color: white ;
+  font-family:Roboto-bold;
 
 `
 

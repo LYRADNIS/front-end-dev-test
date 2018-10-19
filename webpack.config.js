@@ -18,6 +18,16 @@ module.exports = {
           plugins: ['babel-plugin-styled-components'],
         },
       },
+      {
+			test: /\.(css)$/,
+			use: [{
+				loader: 'style-loader'
+			}, {
+				loader: 'css-loader'
+			}, {
+				loader: 'sass-loader'
+			}]
+		},
 
     ],
   },

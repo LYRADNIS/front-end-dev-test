@@ -50,6 +50,7 @@ const ChildImg3 = styled.img`
 const Graphics = () => {
     return (
         <Div>
+
           <ChildDiv>
             text
           </ChildDiv>

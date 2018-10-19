@@ -7,14 +7,14 @@ const Button = styled.button`
   height: 20px;
   background: transparent;
   border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
+  border: 2px solid black;
+  color: black;
   margin: auto;
   padding: 0.25em 1em;
     ${props =>
     props.primary &&
     css`
-      background: palevioletred;
+      background: black;
       color: white;
     `};
 `
@@ -22,12 +22,13 @@ const Button = styled.button`
 const Input = styled.input`
   width: 100px;
   border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
+  border: 2px solid black;
+  color: black;
   padding-bottom:20px;
 
   padding: 20px;
   margin: auto
+
 
 `
 
@@ -56,7 +57,6 @@ class EmailForm extends Component{
     }
 
     handleInput(e){
-        console.log(e.target.placeholder)
         switch(e.target.placeholder){
             case 'Email':
              return this.setState({

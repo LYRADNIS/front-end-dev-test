@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import Carousel from './carousel.jsx';
+import ImgCarousel from './carousel.jsx';
 import BackgroundInfo from './background.jsx';
 import SearchBar from './SearchBar.jsx';
 import Graphics from './graphics.jsx';
@@ -25,7 +25,14 @@ const FlexDiv = styled.div`
   position: fixed;
   top: 30px;
 `
-
+const Button = styled.button`
+  padding-top:5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top:5px;
+  border-radius: 8px;
+`
 
 
 class App extends React.Component {
@@ -36,6 +43,7 @@ class App extends React.Component {
     this.carouselForm = React.createRef()
     this.backgroundForm = React.createRef()
     this.graphicsForm = React.createRef()
+
     this.handleScroll = this.handleScroll.bind(this)
   }
 
@@ -69,10 +77,10 @@ class App extends React.Component {
 
         <FlexDiv>
           <SearchBar />
-          <button onClick={this.handleScroll} value='background'>Our Info</button>
-          <button onClick={this.handleScroll} value='graphics'>Why us?</button>
-          <button onClick={this.handleScroll} value='carousel'>Images</button>
-          <button onClick={this.handleScroll} value='email'>Email Us</button>
+          <Button onClick={this.handleScroll} value='background' >Our Info</Button>
+          <Button onClick={this.handleScroll} value='graphics'>Why us?</Button>
+          <Button onClick={this.handleScroll} value='carousel'>Images</Button>
+          <Button onClick={this.handleScroll} value='email'>Email Us</Button>
         </FlexDiv>
 
 
@@ -86,7 +94,7 @@ class App extends React.Component {
         </div>
 
         <div ref={this.carouselForm}>
-          <Carousel value='carousel'/>
+          <ImgCarousel value='carousel'/>
         </div>
 
         <div ref={this.emailForm}>
