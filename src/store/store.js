@@ -6,10 +6,10 @@ import logger from 'redux-logger';
 
 import promise from 'redux-promise-middleware';
 
-import  combinedReducers  from '../reducers/index.js'
+import  rootReducers  from '../reducers/index.js'
 
 const middleware = applyMiddleware(promise(), thunk, logger)
-const store = createStore(combinedReducers, middleware);
+const store = createStore(rootReducers, middleware);
 
 
 store.subscribe(()=>{

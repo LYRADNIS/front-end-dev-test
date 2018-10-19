@@ -5,6 +5,7 @@ const Div = styled.div`
   height: 100vh;
   border-radius: 3px;
   border: 2px solid yellow;
+  background-color:black ;
 
 `
 

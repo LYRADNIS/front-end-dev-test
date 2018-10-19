@@ -33,7 +33,7 @@ const Input = styled.input`
 
 const Div = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   border-radius: 3px;
   border: 2px solid green;
   display: flex;
@@ -85,7 +85,10 @@ class EmailForm extends Component{
     render(){
         return(
             <Div>
-                <Button value='Send it!' onClick={this.showState}/>
+                Get A quote for your company today!
+                <Button value='Send it!' onClick={this.showState}>
+                  Send
+                </Button>
                 <Input placeholder='Email' onKeyPress={this.handleInput}/>
                 <Input placeholder='Name'onKeyPress={this.handleInput}/>
                 <Input placeholder='Company'onKeyPress={this.handleInput}/>

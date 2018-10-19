@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom'
 import styled, {css} from 'styled-components';
 
 const Div = styled.div`
-  width: 100%;
-  height: 25px;
+  width: 50%;
+  height: 30%;
   border-radius: 3px;
-  border: 2px solid red;
+  border: 2px;
+  background-size: auto
+
 `
+
+const Img = styled.img`
+  width: 80%;
+  height:10vh;
+
+`
+
+
 class SearchBar extends Component {
     constructor(){
         super();
@@ -16,7 +26,7 @@ class SearchBar extends Component {
     render(){
        return (
         <Div>
-            this is the search bar
+            <Img src='https://s3.amazonaws.com/roostergrin/igniter-logo-white.png'/>
 
         </Div>
        )

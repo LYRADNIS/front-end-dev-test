@@ -6,6 +6,7 @@ const Div = styled.div`
   height: 100vh;
   border-radius: 3px;
   border: 2px solid black;
+  background-color: black;
 `
 
 class Carousel extends Component {
@@ -16,7 +17,7 @@ class Carousel extends Component {
   render(){
     return (
       <Div>
-        this is where the carousel will go
+        carousel
       </Div>
       )
   }

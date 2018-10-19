@@ -16,13 +16,17 @@ const Div = styled.div`
 `
 const FlexDiv = styled.div`
   width: 100%;
-  height: 100%;
+  height: 5%;
   border-radius: 3px;
-  border: 2px solid blue;
+  border: 2px;
   display: flex;
   justify-content: space-around;
   flex-flow: row;
+  position: fixed;
+  top: 30px;
 `
+
+
 
 class App extends React.Component {
   constructor(props){
@@ -36,21 +40,24 @@ class App extends React.Component {
   }
 
   handleScroll(e){
-    console.log(e.target.value)
     let myDomNode = '';
     switch(e.target.value){
       case 'carousel':
         myDomNode = ReactDOM.findDOMNode(this.carouselForm.current)
-        return window.scrollTo(0, myDomNode.offsetTop);
+        window.scrollTo(0, myDomNode.offsetTop )
+        break;
       case 'background':
         myDomNode = ReactDOM.findDOMNode(this.backgroundForm.current)
-        return window.scrollTo(0, myDomNode.offsetTop);
+        window.scrollTo(0, myDomNode.offsetTop - 50)
+        break;
       case 'graphics':
         myDomNode = ReactDOM.findDOMNode(this.graphicsForm.current)
-        return window.scrollTo(0, myDomNode.offsetTop);
+        window.scrollTo(0, myDomNode.offsetTop - 100)
+        break;
       case 'email':
         myDomNode = ReactDOM.findDOMNode(this.emailForm.current)
-        return window.scrollTo(0, myDomNode.offsetTop);
+        window.scrollTo(0, myDomNode.offsetTop -110)
+        break;
 
     }
   }
@@ -59,17 +66,16 @@ class App extends React.Component {
   render(){
     return(
       <Div>
+
         <FlexDiv>
-          Rooster Grin : )
-          <button onClick={this.handleScroll} value='carousel'>Images</button>
+          <SearchBar />
           <button onClick={this.handleScroll} value='background'>Our Info</button>
           <button onClick={this.handleScroll} value='graphics'>Why us?</button>
+          <button onClick={this.handleScroll} value='carousel'>Images</button>
           <button onClick={this.handleScroll} value='email'>Email Us</button>
         </FlexDiv>
 
-        <div ref={this.carouselForm}>
-          <Carousel value='carousel'/>
-        </div>
+
 
         <div ref={this.backgroundForm}>
           <BackgroundInfo value='background'/>
@@ -77,6 +83,10 @@ class App extends React.Component {
 
         <div ref={this.graphicsForm}>
           <Graphics value='graphics'/>
+        </div>
+
+        <div ref={this.carouselForm}>
+          <Carousel value='carousel'/>
         </div>
 
         <div ref={this.emailForm}>
@@ -87,6 +97,7 @@ class App extends React.Component {
           <ContactInfo/>
         </div>
       </Div>
+
     )
   }
 }
