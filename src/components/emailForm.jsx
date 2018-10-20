@@ -18,6 +18,12 @@ const Button = styled.button`
       color: white;
     `};
 `
+const Text = styled.div`
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-style: italic;
+  margin:auto;
+`
 
 const Input = styled.input`
   width: 100px;
@@ -47,10 +53,11 @@ class EmailForm extends Component{
     constructor(){
         super();
         this.state = {
-            currEmail: '',
-            currName: '',
-            currCompany: '',
-            currPhone: '',
+            currEmail: null,
+            currName: null,
+            currCompany: null,
+            currPhone: null,
+            currMessage: 'Must fill in all categories before we may continue.',
         }
         this.handleInput = this.handleInput.bind(this)
         this.showState = this.showState.bind(this)
@@ -78,21 +85,43 @@ class EmailForm extends Component{
 
     }
     showState(){
-        console.log(this.state)
+      // alert is making it slower: for production I would use a modal; not alert
+        for(let key in this.state){
+          console.log(this.state[key])
+          if(this.state[key] === null){
+            alert(this.state.currMessage)
+            return;
+          }
+        }
+        alert(`Thank you ${this.state.currName}, we will be in contact with ${this.state.currCompany} shortly.`)
     }
 
 
     render(){
         return(
             <Div>
-                Get A quote for your company today!
+                <Text>
+                  Get A quote for your company today!
+                </Text>
+                  <Text>
+                    Email Required
+                  </Text>
+                <Input placeholder='Email' onKeyPress={this.handleInput}/>
+                  <Text>
+                    Name Required
+                  </Text>
+                <Input placeholder='Name'onKeyPress={this.handleInput}/>
+                  <Text>
+                    Company Required
+                  </Text>
+                <Input placeholder='Company'onKeyPress={this.handleInput}/>
+                  <Text>
+                    Phone Required
+                  </Text>
+                <Input placeholder='Phone'onKeyPress={this.handleInput}/>
                 <Button value='Send it!' onClick={this.showState}>
                   Send
                 </Button>
-                <Input placeholder='Email' onKeyPress={this.handleInput}/>
-                <Input placeholder='Name'onKeyPress={this.handleInput}/>
-                <Input placeholder='Company'onKeyPress={this.handleInput}/>
-                <Input placeholder='Phone'onKeyPress={this.handleInput}/>
             </Div>
             )
     }

@@ -8,11 +8,12 @@ import EmailForm from './emailForm.jsx';
 import styled, {css} from 'styled-components';
 import ContactInfo from './contactInfo.jsx';
 
+
 const Div = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 3px;
-  border: 2px solid blue;
+  border: 2px;
 `
 const FlexDiv = styled.div`
   width: 100%;
@@ -33,6 +34,11 @@ const Button = styled.button`
   margin-top:5px;
   border-radius: 8px;
 `
+const Text = styled.div`
+  font-family: 'Roboto';
+  font-size: 25px;
+  margin:auto;
+`
 
 
 class App extends React.Component {
@@ -49,22 +55,23 @@ class App extends React.Component {
 
   handleScroll(e){
     let myDomNode = '';
-    switch(e.target.value){
-      case 'carousel':
+    console.log(e.target.innerHTML)
+    switch(e.target.innerHTML){
+      case 'Images':
         myDomNode = ReactDOM.findDOMNode(this.carouselForm.current)
-        window.scrollTo(0, myDomNode.offsetTop )
+        window.scrollTo({top:myDomNode.offsetTop, behavior:"smooth"})
         break;
-      case 'background':
+      case 'Our Info':
         myDomNode = ReactDOM.findDOMNode(this.backgroundForm.current)
-        window.scrollTo(0, myDomNode.offsetTop - 50)
+        window.scrollTo({top:myDomNode.offsetTop -50, behavior:"smooth"})
         break;
-      case 'graphics':
+      case 'Why us?':
         myDomNode = ReactDOM.findDOMNode(this.graphicsForm.current)
-        window.scrollTo(0, myDomNode.offsetTop - 100)
+        window.scrollTo({top:myDomNode.offsetTop - 110, behavior:"smooth"})
         break;
-      case 'email':
+      case 'Contact':
         myDomNode = ReactDOM.findDOMNode(this.emailForm.current)
-        window.scrollTo(0, myDomNode.offsetTop -110)
+        window.scrollTo({top:myDomNode.offsetTop - 110, behavior:"smooth"})
         break;
 
     }
@@ -77,10 +84,26 @@ class App extends React.Component {
 
         <FlexDiv>
           <SearchBar />
-          <Button onClick={this.handleScroll} value='background' >Our Info</Button>
-          <Button onClick={this.handleScroll} value='graphics'>Why us?</Button>
-          <Button onClick={this.handleScroll} value='carousel'>Images</Button>
-          <Button onClick={this.handleScroll} value='email'>Email Us</Button>
+          <Button >
+            <Text onClick={this.handleScroll} value='background'>
+              Our Info
+            </Text>
+          </Button>
+          <Button >
+            <Text onClick={this.handleScroll} value='graphics'>
+              Why us?
+            </Text>
+          </Button>
+          <Button >
+            <Text onClick={this.handleScroll} value='carousel'>
+              Images
+            </Text>
+          </Button>
+          <Button >
+            <Text onClick={this.handleScroll} value='email'>
+              Contact
+            </Text>
+          </Button>
         </FlexDiv>
 
 

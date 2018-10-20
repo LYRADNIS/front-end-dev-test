@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import styled, {css} from 'styled-components';
+import GoogleApiWrapper from './googleMaps.jsx'
+
 
 const Div = styled.div`
   width: 100%;
@@ -21,22 +23,36 @@ const ChildDiv = styled.div`
   margin: auto;
   background-color: white ;
   font-family:Roboto-bold;
-
 `
-
-
-
+const Text = styled.div`
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin:auto;
+`
+const googleStyle = {
+  objectFit: 'fill',
+  maxWidth: '20%',
+  maxHeight: '20%',
+}
 
 
 const contactInfo = () => {
   return (
     <Div>
       <ChildDiv>
-        Timeables: Open 8 - 8 etc : address, phone number
+        <Text className='font-effect-fire-animation'>
+        <h3 > Universe C132: Open 8:00 A.M to 10:00 P.M</h3>
+        Knock on the door and ask for Rick.
+        If hes not there, ask for Morty.
+        <br/>
+        Wubba Lubba Dub Dub: 907-112-3842<br/>
+        1938 GetShwifty Street, San Francisco
+        </Text>
+
       </ChildDiv>
 
       <ChildDiv>
-        pictures of google maps on where we are
+        <GoogleApiWrapper style={googleStyle}/>
       </ChildDiv>
 
     </Div>

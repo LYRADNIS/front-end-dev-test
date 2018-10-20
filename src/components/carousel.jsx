@@ -40,6 +40,10 @@ class ImgCarousel extends Component {
             {
                 des: "2",
                 imgSrc: "https://s3.amazonaws.com/thenomad1/iconmonstr-twitter-1.svg"
+            },
+            {
+              des: "3",
+              imgSrc: 'https://s3.amazonaws.com/thenomad1/gmail.svg'
             }
         ]
     }

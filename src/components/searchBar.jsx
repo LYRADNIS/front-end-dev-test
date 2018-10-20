@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 
 const Div = styled.div`
   width: 50%;
-  height: 30%;
+  height: 35%;
   border-radius: 3px;
   border: 2px;
   background-size: auto
@@ -12,7 +12,7 @@ const Div = styled.div`
 `
 
 const Img = styled.img`
-  width: 80%;
+  width: 75%;
   height:10vh;
 
 `
