@@ -7,11 +7,12 @@ const Div = styled.div`
   width: 100%;
   height: 25vh;
   border-radius: 3px;
-  border: 2px solid blue;
+  border: 2px;
   display:grid;
   grid-template-columns: 500px 500px;
   justify-content: center;
   justify-content: space-around;
+  background-color:black;
 
 `
 
@@ -23,6 +24,7 @@ const ChildDiv = styled.div`
   margin: auto;
   background-color: white ;
   font-family:Roboto-bold;
+  background-color: black;
 `
 const Text = styled.div`
   font-family: 'Roboto';

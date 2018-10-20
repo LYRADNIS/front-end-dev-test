@@ -41,8 +41,8 @@ const Input = styled.input`
 const Div = styled.div`
   width: 100%;
   height: 60vh;
-  border-radius: 3px;
-  border: 2px solid green;
+
+  bottom-border: 4px solid black;
   display: flex;
   align-content: center;
   justify-content: center;
