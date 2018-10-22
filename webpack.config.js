@@ -43,51 +43,6 @@ module.exports = {
 
 
 
-// module.exports = {
-// 	entry: `${SRC_DIR}/app.jsx`,
-
-//     // where our data goes
-
-// 	watch: true,
-
-
-// 	module: {
-// 		rules: [
-// 		{
-// 		 test: /\.jsx$/,
-//         exclude: /node_modules/,
-//         loader: 'babel-loader',
-//         options: {
-//           presets: ['env', 'react'],
-//           plugins: ['babel-plugin-styled-components'],
-//         },
-// 		},
-
-//     {
-//       test: /\.html$/,
-//       loader: "raw-loader"
-//     },
-
-	 // {
-		// test: /\.(css)$/,
-		// 	use: [{
-		// 		loader: 'style-loader'
-		// 	}, {
-		// 		loader: 'css-loader'
-		// 	}, {
-		// 		loader: 'sass-loader'
-		// 	}]
-		// },
-
-// 			//third loader could go here
-// 		]
-// 	},
-// 	output: {
-// 		path: DIST_DIR,
-// 		filename: 'bundle.js'
-// 	},
-// };
-
 
 
 

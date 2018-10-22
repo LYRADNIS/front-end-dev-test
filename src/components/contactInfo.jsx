@@ -27,7 +27,7 @@ const ChildDiv = styled.div`
   background-color: black;
 `
 const Text = styled.div`
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-size: 20px;
   margin:auto;
 `

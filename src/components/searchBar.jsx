@@ -17,17 +17,12 @@ const Img = styled.img`
 
 `
 
-
 class SearchBar extends Component {
-    constructor(){
-        super();
-    }
 
     render(){
        return (
         <Div>
             <Img src='https://s3.amazonaws.com/roostergrin/igniter-logo-white.png'/>
-
         </Div>
        )
     }
