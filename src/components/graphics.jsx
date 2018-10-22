@@ -50,6 +50,10 @@ const ChildImg3 = styled.img`
   background-size: auto;
   background-image: url('https://s3.amazonaws.com/roostergrin/img2.jpg')
 `
+const H1 = styled.h1`
+  margin:auto;
+  width: 100%;
+`
 
 
 
@@ -89,6 +93,8 @@ const Graphics = () => {
           <ChildDiv>
             <ChildImg3 />
           </ChildDiv>
+
+
         </Div>
         )
 }

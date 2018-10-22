@@ -27,6 +27,9 @@ const H1 = styled.h1`
   position: absolute;
 
 `
+const style = {
+  width: '100%',
+}
 
 
 class ImgCarousel extends Component {
@@ -35,7 +38,7 @@ class ImgCarousel extends Component {
     let Carousel = ''
     console.log(this.props.props,'loaded')
     if(this.props.props.LOADED === true && this.props.props.LOADING === false){
-      Carousel = (<CarouselSlider slideItems = {this.props.props.currImgs} />)
+      Carousel = (<CarouselSlider slideItems = {this.props.props.currImgs} style={style}/>)
     }
 
     if(this.props.props.LOADING === true && this.props.props.LOADED === false){

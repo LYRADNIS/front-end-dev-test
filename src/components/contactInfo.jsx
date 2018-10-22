@@ -46,12 +46,10 @@ const contactInfo = () => {
         <h3 > Universe C132: Open 8:00 A.M to 10:00 P.M</h3>
         Knock on the door and ask for Rick.
         <br/>
-        <br/>
         If he's not there, ask for Morty.
         <br/>
         <br/>
         Wubba Lubba Dub Dub: 907-112-3842
-        <br/>
         <br/>
         1938 GetShwifty Street, San Francisco
         </Text>

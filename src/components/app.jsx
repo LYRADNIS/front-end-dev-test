@@ -31,16 +31,18 @@ const FlexDiv = styled.div`
   top: 30px;
 `
 const Button = styled.button`
-  padding-top:5px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-top:5px;
+  padding-top:2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin-top:40px;
   border-radius: 8px;
+  width: 180px;
+  height: 40px;
 `
 const Text = styled.div`
   font-family: 'Roboto';
-  font-size: 25px;
+  font-size: 16px;
   margin:auto;
 `
 
