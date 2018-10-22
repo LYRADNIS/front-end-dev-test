@@ -64,7 +64,6 @@ class App extends React.Component {
 
   handleScroll(e){
     let myDomNode = '';
-    console.log(e.target.innerHTML)
     switch(e.target.innerHTML){
       case 'Images':
         myDomNode = ReactDOM.findDOMNode(this.carouselForm.current)
@@ -86,9 +85,7 @@ class App extends React.Component {
     }
   }
   getFlickrPictures(){
-    // gallery_id 72157661340054817
     actions.ADD_FLICKR_PHOTOS()();
-
   }
 
 

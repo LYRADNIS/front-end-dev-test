@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled, {css} from 'styled-components';
-import GoogleApiWrapper from './googleMaps.jsx'
+import CareerTab from './CareerTab.jsx'
 
 
 const Div = styled.div`
@@ -49,7 +49,9 @@ const contactInfo = () => {
         <br/>
         If he's not there, ask for Morty.
         <br/>
+        <br/>
         Wubba Lubba Dub Dub: 907-112-3842
+        <br/>
         <br/>
         1938 GetShwifty Street, San Francisco
         </Text>
@@ -57,7 +59,7 @@ const contactInfo = () => {
       </ChildDiv>
 
       <ChildDiv>
-        <GoogleApiWrapper style={googleStyle}/>
+        <CareerTab style={googleStyle}/>
       </ChildDiv>
 
     </Div>

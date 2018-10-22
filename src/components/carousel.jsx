@@ -30,32 +30,6 @@ const H1 = styled.h1`
 
 
 class ImgCarousel extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      data: [
-            {
-                des: "1",
-                imgSrc: "https://s3.amazonaws.com/thenomad1/rarrow.svg"
-            },
-            {
-                des: "2",
-                imgSrc: "https://s3.amazonaws.com/thenomad1/iconmonstr-twitter-1.svg"
-            },
-            {
-              des: "3",
-              imgSrc: 'https://s3.amazonaws.com/thenomad1/gmail.svg'
-            }
-        ]
-    }
-    this.showState = this.showState.bind(this)
-
-  }
-  showState(){
-    console.log(this.props)
-  }
-
-
 
   render(){
     let Carousel = ''
