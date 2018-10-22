@@ -71,7 +71,7 @@ const BackgroundInfo = () => {
               <Typist.Backspace count={80} delay={1000} />
               Still Waiting? Dangerous game you're playing.
               <Typist.Backspace count={60} delay={1000} />
-              Wow, why are you still on this page? Go look at other stuff
+              Wow, still on this page?
               <Typist.Backspace count={50} delay={1000} />
               I suppose you want a discount now...
               <Typist.Backspace count={50} delay={1000} />

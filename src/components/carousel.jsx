@@ -28,8 +28,9 @@ class ImgCarousel extends Component {
     let Carousel = ''
     console.log(this.props.props,'loaded')
     if(this.props.props.LOADED === true && this.props.props.LOADING === false){
+      let dataLimit = [this.props.props.currImgs[0],this.props.props.currImgs[1],this.props.props.currImgs[2]];
       Carousel = (<CarouselSlider
-        slideItems = {this.props.props.currImgs}
+        slideItems = {dataLimit}
         buttonSetting={{
           placeOn: "bottom-beneath",
         }}
