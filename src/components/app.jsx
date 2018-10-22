@@ -7,6 +7,10 @@ import Graphics from './graphics.jsx';
 import EmailForm from './emailForm.jsx';
 import styled, {css} from 'styled-components';
 import ContactInfo from './contactInfo.jsx';
+import store from '../store/store.js'
+import actions from '../actions/emailActions.js';
+import flickrInfo from './api_key.js'
+import axios from 'axios'
 
 
 const Div = styled.div`
@@ -51,6 +55,11 @@ class App extends React.Component {
     this.graphicsForm = React.createRef()
 
     this.handleScroll = this.handleScroll.bind(this)
+    this.getFlickrPictures = this.getFlickrPictures.bind(this)
+  }
+
+  componentDidMount(){
+    this.getFlickrPictures()
   }
 
   handleScroll(e){
@@ -67,7 +76,7 @@ class App extends React.Component {
         break;
       case 'Why us?':
         myDomNode = ReactDOM.findDOMNode(this.graphicsForm.current)
-        window.scrollTo({top:myDomNode.offsetTop - 110, behavior:"smooth"})
+        window.scrollTo({top:myDomNode.offsetTop - 125, behavior:"smooth"})
         break;
       case 'Contact':
         myDomNode = ReactDOM.findDOMNode(this.emailForm.current)
@@ -75,6 +84,11 @@ class App extends React.Component {
         break;
 
     }
+  }
+  getFlickrPictures(){
+    // gallery_id 72157661340054817
+    actions.ADD_FLICKR_PHOTOS()();
+
   }
 
 

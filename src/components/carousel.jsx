@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
 import CarouselSlider from 'react-carousel-slider';
+import {connect} from 'react-redux'
 
 
 const Div = styled.div`
@@ -29,8 +30,8 @@ const H1 = styled.h1`
 
 
 class ImgCarousel extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
       data: [
             {
@@ -47,23 +48,48 @@ class ImgCarousel extends Component {
             }
         ]
     }
+    this.showState = this.showState.bind(this)
 
+  }
+  showState(){
+    console.log(this.props)
   }
 
 
+
   render(){
+    let Carousel = ''
+    console.log(this.props.props,'loaded')
+    if(this.props.props.LOADED === true && this.props.props.LOADING === false){
+      Carousel = (<CarouselSlider slideItems = {this.props.props.currImgs} />)
+    }
+
+    if(this.props.props.LOADING === true && this.props.props.LOADED === false){
+      console.log('carousel loadeding still')
+      Carousel = (
+      <div>still loading...</div>
+        )
+    }
+
+    if(this.props.props.LOADING === false && this.props.props.LOADED === false){
+      console.log('carousel request not made')
+      Carousel = (<div>Sending request now</div>)
+    }
+
 
     return (
       <Div>
-
-            Images
-
-          <CarouselSlider slideItems = {this.state.data} />;
-
-
+        {
+          Carousel
+        }
       </Div>
       )
   }
 }
+const MapStateToProps = (state) => {
+  return {
+    props: state.presentationReducer,
+  }
+}
 
-export default ImgCarousel;
+export default connect(MapStateToProps)(ImgCarousel)

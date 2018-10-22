@@ -101,7 +101,7 @@ class EmailForm extends Component{
         return(
             <Div>
                 <Text>
-                  Get A quote for your company today!
+                  Get a quote for your company today!
                 </Text>
                   <Text>
                     Email Required
