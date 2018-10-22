@@ -14,22 +14,12 @@ const Div = styled.div`
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  font-family: 'Roboto';
 
 `
-const H1 = styled.h1`
-  max-width: 50%;
-  width: 50%;
-  height: 20%;
-  margin: auto;
-  justify-content: center;
-  align-content: center
-  color: green;
-  position: absolute;
 
-`
-const style = {
-  width: '100%',
-}
+
+
 
 
 class ImgCarousel extends Component {
@@ -38,21 +28,33 @@ class ImgCarousel extends Component {
     let Carousel = ''
     console.log(this.props.props,'loaded')
     if(this.props.props.LOADED === true && this.props.props.LOADING === false){
-      Carousel = (<CarouselSlider slideItems = {this.props.props.currImgs} style={style}/>)
+      Carousel = (<CarouselSlider
+        slideItems = {this.props.props.currImgs}
+        buttonSetting={{
+          placeOn: "bottom-beneath",
+        }}
+        itemsStyle = {{
+          margin: "0px 80px",
+          width: '100%',
+
+
+        }}
+        sliderBoxStyle={{
+        height:'auto',
+        width: '100%',
+        backgroundColor: 'black',
+      }}/>)
     }
 
     if(this.props.props.LOADING === true && this.props.props.LOADED === false){
-      console.log('carousel loadeding still')
       Carousel = (
       <div>still loading...</div>
         )
     }
 
     if(this.props.props.LOADING === false && this.props.props.LOADED === false){
-      console.log('carousel request not made')
       Carousel = (<div>Sending request now</div>)
     }
-
 
     return (
       <Div>
