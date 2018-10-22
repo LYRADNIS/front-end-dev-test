@@ -79,7 +79,7 @@ class App extends React.Component {
         break;
       case 'Why us?':
         myDomNode = ReactDOM.findDOMNode(this.graphicsForm.current)
-        window.scrollTo({top:myDomNode.offsetTop - 115, behavior:"smooth"})
+        window.scrollTo({top:myDomNode.offsetTop - 110, behavior:"smooth"})
         break;
       case 'Contact':
         myDomNode = ReactDOM.findDOMNode(this.emailForm.current)

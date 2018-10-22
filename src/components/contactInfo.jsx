@@ -20,7 +20,6 @@ const ChildDiv = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 3px;
-  border: 2px ;
   margin: auto;
   background-color: white ;
   font-family:Roboto-bold;
@@ -47,8 +46,6 @@ const contactInfo = () => {
         Knock on the door and ask for Rick.
         <br/>
         If he's not there, ask for Morty.
-        <br/>
-        <br/>
         Wubba Lubba Dub Dub: 907-112-3842
         <br/>
         1938 GetShwifty Street, San Francisco
