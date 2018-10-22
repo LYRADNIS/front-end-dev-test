@@ -29,6 +29,7 @@ const FlexDiv = styled.div`
   flex-flow: row;
   position: fixed;
   top: 30px;
+  left: -15px;
 `
 const Button = styled.button`
   padding-top:2px;
@@ -37,8 +38,8 @@ const Button = styled.button`
   padding-left: 2px;
   margin-top:40px;
   border-radius: 8px;
-  width: 180px;
-  height: 40px;
+  width: 160px;
+  height: 30px;
 `
 const Text = styled.div`
   font-family: 'Roboto';
@@ -77,7 +78,7 @@ class App extends React.Component {
         break;
       case 'Why us?':
         myDomNode = ReactDOM.findDOMNode(this.graphicsForm.current)
-        window.scrollTo({top:myDomNode.offsetTop - 125, behavior:"smooth"})
+        window.scrollTo({top:myDomNode.offsetTop - 115, behavior:"smooth"})
         break;
       case 'Contact':
         myDomNode = ReactDOM.findDOMNode(this.emailForm.current)
