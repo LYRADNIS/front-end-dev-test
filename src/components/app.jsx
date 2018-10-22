@@ -29,7 +29,8 @@ const FlexDiv = styled.div`
   flex-flow: row;
   position: fixed;
   top: 30px;
-  left: -15px;
+  left: -1px
+
 `
 const Button = styled.button`
   padding-top:2px;
